@@ -1,0 +1,1189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+	overflow: hidden;
+	background: radial-gradient(ellipse 117% 106% at 50% 20%, #DDD7CC 0%, #DDD7CC 65%, #D2CBBE 65%, #D2CBBE 100%);
+}
+.wrapper{
+	width: 1730px;
+	margin: 0 auto;
+}
+/*header
+-----------------------------------------------------------------------------------*/
+header{
+	padding: 10px 0px 50px 0px;
+}
+.header-contents{
+	display: flex;
+	justify-content: space-between;
+}
+header h1{
+	width: 380px;
+}
+.main-nav ul{
+	display: flex;
+    color: #fff;
+}
+.main-nav ul li{
+	width: 80px;
+	margin-left: 20px;
+}
+
+/*books-------------------------------------------------------------------------------*/
+.flipbook { 
+    width: 1200px; 
+    height: 800px;
+    filter: drop-shadow(-12px 12px 15px #3d3d3daf);
+    
+}
+
+.flipbook .hard {
+    position: relative;
+    background: #ffffff;
+    box-shadow: inset 10px 0px 10.0px -5px #3d3d3daf;
+    /* border-radius: 4px; */
+}
+.flipbook .hard::before,
+.flipbook .hard::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+.flipbook .hard::before {
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    background: #a9a9a9;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+.flipbook .hard::after {
+    top: 27px;
+    left: 27px;
+    right: 27px;
+    bottom: 27px;
+    background: inherit;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.flipbook .hard > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hard.page.p2.even{
+    background-color: #ffffff;
+}
+
+.h201{
+    position: relative;
+    font-size: 32px;
+    letter-spacing: 25px;
+    margin-top: 230px;
+    padding-bottom: 50px;
+}
+.h201::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 300px;
+    height: 1px;
+    background: #000000;
+    transform: translateX(-50%);
+}
+.h202{
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin: 50px 0px 0px 0px;
+}
+.subta{
+	font-size: 12px;
+    color: #000000;
+    margin-top: 70px;
+}
+.hardbox img{
+    margin: 70px 1px 70px 0px;
+    width: 87%; 
+    height: auto;
+	object-fit: cover;
+}
+.hardbutton-text p{
+    letter-spacing: 5px;
+    font-size: 10px;
+}
+/* はじめに --------------------------------------------------*/
+
+.linebox h3{
+    margin: 15px 30px 15px 0px;
+    padding: 30px 0px 10px 40px;
+    font-size: 30px;
+    text-align: left;
+}
+.linebox h3::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 500px;
+    height: 1px;
+    background: #000000;
+    transform: translateX(-50%);
+}
+.linebox p{
+    text-align: left;
+    padding: 0px 0px 0px 40px;
+}
+/* 共通 */
+.topinfo::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    width: 500px;
+    height: 0px;
+    border-top: 1px dashed #777777;
+    transform: translateX(-50%);
+}
+.books{
+    display: flex;
+    justify-content: left;
+    margin: 10px 25px 45px 10px;
+}
+.books img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    margin: 60px;
+}
+.bookssub img{
+    width: 10%;
+    object-fit: cover;
+    margin: 60px 110px 60px 60px;
+}
+.text-box{
+    text-align: left;
+}
+.text-box h4{
+    font-size: 20px;
+    font-weight: bold;
+    /* border-bottom: solid 2px ; */
+    margin: 20px 0px;
+}
+.text-box p{
+    padding: 0px 0px 0px 0px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+.p-name{
+    font-size: 10px;
+    margin: 70px 0px 0px 10px;
+}
+/* 目次 -------------------------------------------------------------*/
+.toc-list{
+    list-style: none;
+    margin: 0px;
+}
+.toc-list li{
+    margin-bottom: 15px;
+}
+.toc-list a{
+    color: #000000;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.toc-list a:hover{
+    text-decoration: underline;
+}
+
+.flipbook .page {
+    background: white;
+	text-align: center; 
+    
+}
+.nober{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0px 30px 0px 0px;
+}
+.text-box-sub{
+    border-left: solid 2px;
+    padding: 0px 0px 0px 30px;
+}
+.text-box-sub h4{
+    margin-top: 0px;
+}
+.mokuji-paper{
+    margin: 60px;
+    padding: 0px 0px 0px 30px;
+}
+.mokuji-bottominfo p{
+    padding: 0px 0px 0px 30px;
+}
+.p-name-mokuji{
+    margin-top: -55px;
+}
+.p-name-p1{
+    font-size: 10px;
+    margin: 140px 0px 0px 10px;
+}
+/* 2ページ------------------------------------------------------------------ */
+.page.p5.odd{
+    background-color: #e2dbcd;
+}
+
+.p-name-p2{
+    font-size: 10px;
+    margin: 60px 0px 0px 50px;
+    text-align: left;
+}
+.h201-p2{
+    position: relative;
+    font-size: 11px;
+    letter-spacing: 4.2;
+    margin-top: 230px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+.h201-p2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 1px;
+    height: 50px;
+    background: #000000;
+    transform: translateX(-50%);
+}
+.h201-p2 span{
+    font-size: 80px;
+}
+.subta-kugiri{
+    margin-top: 20px;
+}
+.hardbox-kugiri img{
+    width: 70%;
+}
+
+
+    /* =========================
+    PAGE HEADER
+    ========================= */
+
+    .page-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 0px 20px 50px;
+    }
+
+    .page-header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 49px;
+        width: 500px;
+        border-bottom: 1px solid #222;
+    }
+
+    .page-number {
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: .04em;
+    }
+
+    .page-divider {
+        width: 1px;
+        height: 38px;
+        background: #222;
+    }
+
+    .page-title {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: .08em;
+    }
+
+    .page-title span {
+        display: block;
+        margin-top: 4px;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: .18em;
+        color: #666;
+    }
+
+    .chapter-label {
+        position: absolute;
+        top: 28px;
+        right: 45px;
+        font-size: 10px;
+        letter-spacing: .2em;
+        color: #333;
+    }
+
+    /* =========================
+    PROFILE
+    ========================= */
+
+    .profile-main {
+        display: flex;
+        justify-content: center;
+        grid-template-columns: 260px 1fr;
+        gap: 5px;
+        align-items: center;
+        margin-top: 65px;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: #ddd;
+        overflow: hidden;
+        filter: grayscale(100%);
+    }
+
+    .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: rotate(-16deg);
+    }
+
+    .profile-name {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .profile-name span {
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #666;
+    }
+
+    .profile-text {
+        width: 300px;
+        line-height: 2.2;
+        font-size: 13px;
+        color: #444;
+    }
+
+    /* =========================
+    SKILL TABLE
+    ========================= */
+
+    .skill-table {
+        margin-top: 70px;
+        position: relative;
+        padding-top: 3px;
+    }
+
+    .skill-table::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 49px;
+        width: 500px;
+        border-top: 1px solid #222;
+    }
+
+    .skill-row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    .skill-row::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 49px;
+        width: 500px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .skill-title {
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .skill-content {
+        font-size: 12px;
+        color: #555;
+        line-height: 1.8;
+    }
+    .p-name-p3{
+        font-size: 10px;
+        margin: 50px 0px 0px 10px;
+        text-align: left;
+    }
+/* =========================
+    CAREER
+    ========================= */
+
+    .career-intro {
+        margin: 40px 0px 40px 30px;
+        font-size: 13px;
+        line-height: 2;
+        color: #555;
+    }
+
+    .timeline {
+        position: relative;
+        margin-top: 50px;
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 70px;
+        top: 5px;
+        bottom: 5px;
+        width: 1px;
+        background: #222;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin: 0px 0px 45px 80px;
+        text-align: left;
+    }
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -53px;
+        top: 4px;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #222;
+        border-radius: 50%;
+        background: #fff;
+    }
+
+    .timeline-year {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .timeline-title {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .timeline-text {
+        margin-top: 8px;
+        font-size: 11px;
+        line-height: 1.9;
+        color: #666;
+    }
+.p-name-p4{
+        font-size: 10px;
+        margin: -30px 0px 0px 10px;
+        text-align: left;
+    }
+/* =========================
+    CAREER HIGHLIGHT
+    ========================= */
+
+    .career-list {
+        margin-top: 55px;
+    }
+
+    .career-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        padding: 25px 0;
+        margin-left: 45px;
+    }
+
+    .career-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        width: 500px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .career-card-number {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .career-card-title {
+        font-size: 15px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .career-card-text {
+        margin-top: 8px;
+        font-size: 11px;
+        line-height: 1.9;
+        color: #666;
+        text-align: left;
+    }
+    .p-name-p5{
+        font-size: 10px;
+        margin: 100px 0px 0px 10px;
+        text-align: left;
+    }
+    .page.p9.odd {
+    background-color: #e2dbcd;
+}
+/* =====================================
+WORKS INDEX
+===================================== */
+
+.works-index {
+    margin-top: 45px;
+}
+.page-title-sub{
+    font-size: 18px;
+    text-align: left;
+}
+.works-index-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    min-height: 78px;
+    align-items: center;
+    border-bottom: 1px dotted #aaa;
+}
+
+.works-number {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.works-index-item h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+.works-index-item p {
+    margin: 6px 0 0;
+    font-size: 11px;
+    color: #666;
+}
+
+
+/* =====================================
+WORK PREVIEW
+===================================== */
+
+.work-preview {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 45px auto 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    overflow: visible;
+}
+
+
+.laptop {
+    width: 100%;
+}
+
+
+.laptop-screen {
+    position: relative;
+    width: 78%;
+    margin: auto;
+    padding: 12px;
+    background: #111;
+    border-radius: 15px 15px 5px 5px;
+}
+
+
+.laptop-screen img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: .35s;
+}
+
+
+.work-preview:hover
+.laptop-screen img {
+    filter: grayscale(40%);
+    transform: scale(1.015);
+}
+
+
+.laptop-base {
+    width: 86%;
+    height: 17px;
+    margin: auto;
+    background: #aaa;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* VIEW */
+
+.view-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+        translate(-50%, -50%);
+    padding: 11px 27px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba(0,0,0,.65);
+    font-size: 10px;
+    letter-spacing: .25em;
+    opacity: 0;
+    transition: .3s;
+}
+
+
+.work-preview:hover
+.view-label {
+
+    opacity: 1;
+}
+/* =====================================
+WORKS｜制作情報
+===================================== */
+
+.work-info {
+    display: grid;
+    grid-template-columns: 150px 190px;
+    gap: 30px;
+    margin: 60px 0px 0px 50px;
+    text-align: left;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #222;
+    font-size: 13px;
+}
+
+.info-item span {
+    font-size: 12px;
+    color: #555;
+}
+
+
+/* =====================================
+WORKS｜コンセプト
+===================================== */
+
+.concept {
+    margin: 40px 0px 0px 50px;
+    text-align: left;
+}
+.concept h2 {
+    position: relative;
+    margin: 0 0 10px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.concept h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 500px;
+    border-bottom: 1px solid #222;
+}
+
+.concept p {
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 2;
+    color: #555;
+}
+
+.p-name-p6{
+        font-size: 10px;
+        margin: 70px 0px 0px 10px;
+        text-align: left;
+    }
+/* =====================================
+WORKS｜PC画像
+===================================== */
+
+.work-preview {
+    position: relative;
+
+    width: 90%;
+    margin: 45px auto 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.work-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .3s;
+}
+.work-preview:hover img {
+    filter: brightness(.85);
+}
+
+
+/* VIEW表示 */
+
+.view-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 11px 27px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba(0, 0, 0, .65);
+    font-size: 10px;
+    letter-spacing: .25em;
+    opacity: 0;
+    transition: .3s;
+}
+
+.work-preview:hover .view-label {
+    opacity: 1;
+}
+
+/* =====================================
+MODAL
+===================================== */
+
+/* .work-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+} */
+.work-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+.work-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.72);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 2;
+    width: min(1100px, 95vw);
+    height: min(750px, 90vh);
+    padding: 45px;
+    background: #fff;
+    border: 1px solid #222;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-title {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #222;
+    margin-bottom: 25px;
+}
+
+.modal-title span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: #777;
+}
+
+.modal-title h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal-image {
+    width: 100%;
+    height: calc(100% - 100px);
+    display: block;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    /* padding: 30px 0; */
+}
+
+.modal-image img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    height: auto;
+    margin: 0 auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+/* =====================================
+PC MOCKUP
+===================================== */
+
+.work-preview {
+    position: relative;
+    width: 90%;
+    margin: 45px auto 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.pc-mockup {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+/* PC本体 */
+
+.pc-body {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+
+/* =====================================
+PC画面
+===================================== */
+
+.pc-screen {
+    position: absolute;
+    /*
+     * ここをPC画像に合わせて調整
+     */
+    top: 4.5%;
+    left: 11.5%;
+    width: 78%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    z-index: 1;
+}
+.pc-screen img {
+    display: block;
+    width: 100%;
+    height: 388%;
+    object-fit: cover;
+}
+
+
+/* =====================================
+VIEW
+===================================== */
+
+.view-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+        translate(-50%, -50%);
+    z-index: 10;
+    padding: 12px 28px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba(0,0,0,.65);
+    font-size: 10px;
+    letter-spacing: .25em;
+    opacity: 0;
+    transition: .3s;
+}
+
+
+.work-preview:hover
+.view-label {
+    opacity: 1;
+}
+/* =====================================
+MODAL｜WEB SITE
+===================================== */
+
+.modal-website {
+    width: 100%;
+    height: calc(10% - 90px);
+    border: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+
+.modal-website iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+/* =====================================
+映画サイト用モーダル
+===================================== */
+.movie-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    /* border: 1px solid #222;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%); */
+}
+.movie-modal.active {
+    display: flex;
+}
+.movie-modal-content {
+    position: relative;
+    z-index: 100000;
+    width: 85vw;
+    height: 85vh;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #222;
+}
+.movie-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+.movie-modal-title {
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+}
+.movie-modal-title span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 9px;
+    letter-spacing: .25em;
+    color: #777;
+}
+.movie-modal-title h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.movie-modal-website {
+    width: 100%;
+    height: calc(100% - 85px);
+    border: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+.movie-modal-website iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+body.movie-modal-open {
+    overflow: hidden;
+}
+.movie-pc-screen img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 798%;
+    object-fit: cover;
+}
+.Photogallery-pc-screen img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 256%;
+    object-fit: cover;
+}
+.p-name-p7{
+    font-size: 10px;
+    margin: 50px 0px 0px 10px;
+    text-align: left;
+}
+.Joyfull-fram-pc-screen img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 336%;
+    object-fit: cover;
+}
+.p-name-p8{
+    font-size: 10px;
+    margin: 20px 0px 0px 10px;
+    text-align: left;
+}
+.oder-kagu-pc-screen img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 828%;
+    object-fit: cover;
+}
+.p-name-p9{
+    font-size: 10px;
+    margin: 35px 0px 0px 10px;
+    text-align: left;
+}
+.p-name-p10{
+    font-size: 10px;
+    margin: 50px 0px 0px 10px;
+    text-align: left;
+}
+.page.p16.even{
+    background-color: #e2dbcd;
+}
+.page.p18.even{
+    background-color: #e2dbcd;
+}
+/* 裏紙 ---------------------------------------------------------------*/
+/* =====================================
+BACK COVER｜本の裏表紙
+====================================== */
+
+.back-cover {
+    position: relative;
+
+    width: 100%;
+    min-height: 800px;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #eeeeee;
+
+    /* 本の裏表紙らしい微妙な影 */
+    box-shadow:
+        inset -8px 0 18px rgba(0, 0, 0, 0.025),
+        inset 0 8px 12px rgba(0, 0, 0, 0.015);
+
+    overflow: hidden;
+}
+
+
+/* -------------------------
+中央のタイトル
+------------------------- */
+
+.back-cover-title {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    font-family:
+        "Helvetica Neue",
+        "Arial",
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.42em;
+
+    color: #222;
+
+    white-space: nowrap;
+}
+
+
+/* PORTFOLIO BOOK */
+
+.back-cover-title span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 8.5px;
+    font-weight: 500;
+
+    letter-spacing: 0.35em;
+
+    color: #333;
+}
