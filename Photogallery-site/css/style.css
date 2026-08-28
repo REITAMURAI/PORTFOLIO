@@ -1,0 +1,662 @@
+@charset "UTF-8";
+
+html {
+	font-size: 100%;
+	line-height: 1.8;
+}
+body {
+	color: #000000;
+}
+a{
+	text-decoration: none;
+	
+}
+
+/* フィルターボタン */
+.filter-button {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 20px 0;
+	list-style: none;
+}
+.filter-button li {
+	font-family: 'Kalnia', serif;
+	font-family: 'Lobster', sans-serif;
+	font-family: 'Noto Serif JP', serif;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin: 0 10px 0 0;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	cursor: pointer;
+	background: #fff;
+	border: 1px solid #333;
+	border-radius: 5px; 
+} 
+/* .filter-button li:last-child {
+	margin: 0;
+} */
+.filter-button li:hover, .filter-button li.is-checked {
+	color: #ccc;
+	background: #000;
+}
+
+
+/*========= LoadingのためのCSS ==========================================*/
+
+/* Loading背景画面設定 ------------------*/
+
+#splash {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background:#fff;
+	text-align:center;
+	color:#000;
+}
+
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #000;
+}
+
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+.coveranime {
+    transform: scaleY(0);
+}
+
+
+
+
+
+
+/*========================================== コンテンツ ==========================================*/
+.contents {
+	width: 920px;
+	padding: 30px 0;
+	margin: 0 auto;
+}
+.grid {
+	display: flex;
+	justify-content: space-between;
+}
+.itembox {
+	width: 24%;
+	margin-top: 10px;
+	text-align: center;
+	overflow: hidden;
+}
+.itembox img{
+	width: 100%;
+	height: auto;
+	transition: transform .5s ease;
+}
+.itembox:hover img {
+    transform: scale(1.3);
+}
+
+/*=============================================== ヘッダー ===============================================*/
+
+/* burger-menu */
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	background:rgb(62, 62, 62);
+    /*動き*/
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left:34%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center;
+}
+
+#g-nav li a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+/*=== 5-3-3 左から右に線が伸びる（下部）===*/
+.gnavi li a {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+	font-family: 'Kalnia', serif;
+	font-family: 'Lobster', sans-serif;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 90px;
+	text-align: left;
+	
+}
+
+.gnavi li a:hover,
+.gnavi li.current a {
+    color: #ffffff;
+}
+
+.gnavi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 30px;
+    left: 1%;
+    /*線の形状*/
+    width: 97%;
+    height: 2px;
+    background: #ffffff;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: left top;
+    /*基点*/
+}
+
+
+/*現在地とhoverの設定*/
+.gnavi li a:hover::after,
+.gnavi li.current a::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+/*========= レイアウトのためのCSS ===============*/
+
+.lead {
+    padding: 50px 20px;
+}
+
+
+/*========= burger-menuボタンのためのCSS ===============*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/* relativeにすると追尾 */
+	position:absolute;  
+    z-index: 9999;/*ボタンを最前面に*/
+	top:10px;
+	right: 10px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+		
+	/*ボタン内側*/
+	
+	.openbtn .openbtn-area{
+		transition: all .4s;/*アニメーションの設定*/
+	}
+	
+	.openbtn span {
+    display: inline-block;
+    transition: all 0.4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    width: 45%;
+	}
+
+	.openbtn span:nth-of-type(1) {
+		top:15px;	
+	}
+	
+	.openbtn span:nth-of-type(2) {
+		top:23px;
+	}
+	
+	.openbtn span:nth-of-type(3) {
+		top:31px;
+	}
+	
+	.openbtn.active .openbtn-area{
+		transform: rotateX(360deg);
+	}
+	
+	.openbtn.active span:nth-of-type(1) {
+		top: 18px;
+		left: 18px;
+		transform: translateY(6px) rotate(-135deg);
+		width: 30%;
+	}
+	
+	.openbtn.active span:nth-of-type(2) {
+		opacity: 0;
+	}
+	
+	.openbtn.active span:nth-of-type(3){
+		top: 30px;
+		left: 18px;
+		transform: translateY(-6px) rotate(135deg);
+		width: 30%;
+	}
+	/* ページトップボタン */
+	.pagetop {
+		position: fixed;
+		bottom: 100px;
+		right: 5px;
+		}
+	.pagetop img{
+		width: 50px;
+	}
+	/*----------------------- 背景 --------------------------*/
+	#slider {
+		width: 100%;
+		height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+		margin-bottom: 80px;
+	}
+	.vegas-overlay{
+		opacity: 5;
+		background: url(../img/02.png) center center;
+	}ackground-filter
+	
+	#header-main{
+		display: flex;
+	}
+	.header-button{
+		display: flex;
+		margin-left: 50px;
+	}
+	.header-log{
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.header-log h1{
+		font-size: 6vw;
+		color: #fff;
+		letter-spacing: 0.2em;
+		line-height: 1;
+		font-family: 'Lobster', sans-serif;
+		/* font-family: 'Noto Serif JP', serif; */
+	}
+	.header-log p{
+		font-size: 2vw;
+		letter-spacing: 0.2em;
+		color: #fff;
+		font-family: 'Lobster', sans-serif;
+	}
+	.header-button li{
+		margin: 20px;
+	}
+	/*----------------------- 流れるテキスト -----------------------*/
+
+/*全共通*/
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+
+}
+
+/*左右のアニメーション*/
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+	animation-name:slideTextX100;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+    from {
+        transform: translateX(-100%);
+        /*要素を左の枠外に移動*/
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /*要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+.slideAnimeRightLeft {
+    animation-name: slideTextX-100;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX-100 {
+    from {
+        transform: translateX(100%);
+        /*要素を右の枠外に移動*/
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /*要素を元の位置に移動*/
+        opacity: 1;
+    }
+
+}
+/*=== 9-1-3 マウスが動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	bottom: 10px;
+	right: 50%;
+    /*マウスの動き1.6秒かけて動く永遠にループ*/
+	animation:mousemove 1.6s ease-in-out infinite;
+}
+
+/*下からの距離が変化して上から下に動く*/
+@keyframes mousemove {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 5px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+
+/*Scrollテキストの描写*/
+.scrolldown span{
+    /*描画位置*/
+	position: absolute;
+	left:-15px;
+	bottom:45px;
+    /*テキストの形状*/
+	color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+}
+
+/*マウスの中の線描写 */
+.scrolldown span::after{
+	content: "";
+    /*描画位置*/
+	position: absolute;
+	top:10px;
+	left:17px;
+    /*線の形状*/
+	width: 1px;
+	height: 15px;
+	background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+	animation: mousepathmove 1.4s linear infinite;
+	opacity:0;
+}
+
+/*上からの距離・不透明度・高さが変化して上から下に流れる*/
+@keyframes mousepathmove{
+	0%{
+		height:0;
+		top:10px;
+		opacity: 0;
+	}
+	50%{
+		height:15px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:30px;
+		opacity: 0;
+	}
+}
+
+/*マウスの描写 */
+.scrolldown:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom:0;
+    left:-10px;
+    /*マウスの形状*/
+	width:25px;
+	height:37px;
+	border-radius: 10px;
+	border:1px solid #eee;
+}
+
+/*マウスの中の丸の描写*/
+.scrolldown:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:26px;
+	left:0;
+    /*丸の形状*/
+	width:5px;
+	height: 5px;
+	border-radius: 50%;
+	border:1px solid #eee;
+}
+
+
+
+	/*------------------------------ モーダルウィンドウ -------------------------*/
+
+	/*全て共通：hideエリアをはじめは非表示*/
+	.hide-area{
+		display: none;
+	}
+
+	/*全て共通：モーダルのボタンの色を変更したい場合*/
+	.modaal-close:after,
+	.modaal-close:before {
+		background: #ccc;
+	}
+
+	.modaal-close:focus:after,
+	.modaal-close:focus:before,
+	.modaal-close:hover:after,
+	.modaal-close:hover:before{
+		background:#666;
+	}
+
+	/*確認を促すモーダル：タイトルの色を変更したい場合*/
+	#modaal-title {
+		font-size: 1.2rem;
+		text-align: center;
+		margin: 0 0 20px;
+	}
+
+
+	/*動画表示のモーダル：余白を変更したい場合*/
+	.modaal-video .modaal-inner-wrapper{
+		padding: 100px;
+	}
+
+
+
+
+	/*===================================== フッター ============================================*/
+	.footer-side{
+		font-size: 12px;
+		position: absolute;
+		left: 20px;
+		top: 40%;
+		color: #fff;
+		letter-spacing: 0.1rem;
+		line-height: 1;
+		writing-mode: vertical-rl;
+	}
+	.footer-button{
+		background-color: #333;
+		padding: 30px 0px;
+
+	}
+	.copyright{
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+	}
+
+
+@media screen and (max-width: 1060px){
+
+
+	#g-nav ul {
+		/*ナビゲーション天地中央揃え*/
+		position: absolute;
+		z-index: 999;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.gnavi li a {
+		/*線の基点とするためrelativeを指定*/
+		position: relative;
+		font-family: 'Kalnia', serif;
+		font-family: 'Lobster', sans-serif;
+		font-family: 'Noto Serif JP', serif;
+		font-size: 20px;
+		text-align: center;
+		
+	}
+	.gnavi li a::after {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    /*線の形状*/
+    width: 90%;
+    height: 1px;
+    transform-origin: center top;
+    /*左上基点*/
+	}
+}
+/* SP ※このままでOK */
+@media screen and (max-width: 768px) {
+	body {
+		margin: 0;
+	}
+	.filter-button {
+		display: block;
+	}
+	.filter-button li {
+		font-size: 20px;
+		margin: 0px 50px 20px 50px;
+	}
+	.contents {
+		width: calc(100% - 20px);
+		padding: 30px 10px;
+	}
+	.grid {
+		width: calc(100% + 10px);
+	}
+	.itembox {
+		width: 48%;
+	}
+	/* ハンバーガーメニュー */
+	#g-nav ul {
+		/*ナビゲーション天地中央揃え*/
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+	.gnavi li a {
+		font-size: 20px;
+		text-align: center;
+		
+	}
+	.gnavi li a::after {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    transform-origin: center top;
+	}
+	/* ページトップボタン */
+	.pagetop {
+		display: none;
+		}
+	.pagetop img{
+		display: none;
+	}
+	/* タイトル */
+	.header-log h1{
+		font-size: 10vw;
+	}
+	.header-log p{
+		font-size: 6vw;
+	}
+	/* サイドフッター */
+	.footer-side{
+		display: none;
+	}
+}
