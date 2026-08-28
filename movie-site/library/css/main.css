@@ -1,0 +1,987 @@
+@charset "UTF-8";
+
+/*共通部分
+------------------------------------------------------------------------*/
+html{
+	font-size: 100%;
+}
+body{
+	background-color: #000000;
+	color: #ffffff;
+	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic medium", "Meiryo", sans-serif;
+	line-height: 1.8;	/*行間*/
+}
+a{
+	text-decoration: none; /*リンク下線消す*/
+	color: #ffffff; /*リンクの色*/
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+/*.wrapper-main{
+	width: 1336px;
+	margin: 0 auto;
+}未定*/
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#MARVEL {
+    /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#333;
+  text-align:center;
+  color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#MARVEL_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	padding: 0px;	/* 念のため */
+	margin: 0px;	/* 念のため */
+}
+
+/* Loading アイコンの大きさ設定　*/
+#MARVEL_logo img {
+  width:250px;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+/*動画表示のモーダルの余白を変更したい場合*/
+.modaal-video .modaal-inner-wrapper{
+	padding:0;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+background:#666;
+}
+/*========= 途中からハンバーガーメニューに変化するのためのCSS ===============*/
+
+/*========= ボタンのためのCSS ===============*/
+
+/*ボタン全体の形状*/
+.openbtn{
+    /*はじめは非表示に*/
+	display: none;
+    /*ボタンの位置*/
+	position:fixed;
+	top:10px;
+	right: 10px;
+	z-index: 999;
+    /*ボタンの形状*/
+	background:#666;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+
+/*ボタンのアイコン設定*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #fff;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+/*========= ヘッダーナビゲーションのためのCSS ===============*/
+
+/*==ヘッダーの形状*/
+#header{
+	height: 70px;
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:#000000;
+	color:#fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	/*padding: 20px;*/
+}
+
+/*.doneクラスがついたヘッダー*/
+#header.dnone {
+	opacity: 1;/*透過0にして非表示に*/
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+#header.dnone.panelactive {
+	opacity: 1;/*不透明にして出現*/
+}
+
+
+/*==ヘッダーのテキストナビゲーションの形状*/
+#g-navi ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+#g-navi ul li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 20px;
+}
+
+#g-navi ul li.current a,
+#g-navi ul li a:hover{
+	color:#fff;	
+}
+
+/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+#header.dnone #g-navi{
+    /*固定位置にして最背面に*/
+    position:fixed;
+	top: 0;
+    left: 0;
+	z-index: -1;
+    /*高さと幅*/  
+	width:100%;
+	height: 100vh;
+    /*天地中央＆テキスト中央揃え*/  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    /*はじめは透過0に*/  
+    opacity: 0;
+	transition: all 0.4s;
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+#header.dnone.panelactive #g-navi{
+	opacity: 1;/*不透明に*/
+	z-index:3;/*最前面に*/
+	background:#464646;
+}
+
+#header.dnone.panelactive #g-navi ul{
+	display:block;/*flexの横並びをblockにして縦並びに*/
+}
+
+
+/*リストの形状*/
+
+#header.dnone.panelactive #g-navi li a{
+	color: #fff;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	transition:all 0.3s;
+}
+section{
+    position: relative;
+    z-index: 1;
+}
+
+
+/* 以下は検証用のレイアウトのための CSS*/
+/*section{
+  padding:300px 0;
+}*/
+
+
+/*header
+-------------------------------------------------------------------------*/
+
+.main-logo{
+	width: 150px;
+}
+.wrapper{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+/*hover  music,share
+----------------------------------------------------------------------------*/
+.hover:hover {
+	opacity: 0.5;
+	transition-duration: 0.3s; /*変化する時間*/
+}
+/*hover1 top li
+----------------------------------------------------------------------------*/
+.hover1 {
+	/*display: inline-block;*/
+	position: relative;
+	text-decoration: none;
+}
+.hover1::after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background: #ffffff;
+	transition: all 0.3s ease 0s;
+}
+.hover1:hover {
+	cursor: pointer;
+}
+.hover1:hover::after {
+	width: 100%;
+}
+/*hover2 news
+---------------------------------------------------------------------------*/
+.hover2 {
+	transition: all 0.6s ease 0s;
+}
+.hover2:hover {
+	cursor: pointer;
+	transform: scale(0.9, 0.9);
+}
+
+/*mainvisual
+---------------------------------------------------------------------------*/
+
+.main-img{
+	position: relative;
+}
+.main-title{
+	position: absolute;
+	right: 39%;
+	bottom: 10%;
+	width: 25%;
+}
+
+
+/*NEWS
+----------------------------------------------------------------------------*/
+
+.news-title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 30px;                             
+}	
+/*card
+-----------------------------------------------------------------------*/
+
+.news-inner{
+	display: flex;
+	align-items: stretch;
+	margin-bottom: 70px;
+	
+}
+.card{
+	width: 320%;
+	height: auto;
+	background-color: #464646;
+	margin: 5px;
+}
+.card__imgframe{
+    width: 100%;
+    height: auto;
+    padding: 9px;
+    background: #464646;
+}
+.card__textbox{
+    width: 100%;
+    height: auto;
+    padding: 15px 15px;
+    background: #464646;
+    box-sizing: border-box;
+	
+}
+.card__textbox > * + *{
+    margin-top: 10px;
+}
+.card__titletext{
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+}
+.card__overviewtext{
+    font-size: 16px;
+    line-height: 150%;
+}
+/*button
+----------------------------------------------------------*/
+
+.button a{
+	width: 300px;
+	background-color: #464646;
+	color: #ffffff;
+	padding: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	display: block;
+	margin: 70px auto;
+	border-radius: 5px; /*角丸*/
+	text-align: center; 
+}
+
+/*STORY
+----------------------------------------------------------*/
+.story-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding-bottom: 16px;
+}
+.story-text{
+	font-size: 19px;
+}
+.story-box{
+	position: relative;
+}
+.story-textbox{
+	position: absolute;
+	left: 9%;
+	bottom: 16%;
+	width: 80%;
+	line-height: 35px;
+	/*text-align: left;
+	align-items: center;*/
+}
+
+/*slider
+----------------------------------------------------------*/
+/*
+右から左へ
+----------------------------*/
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+/*----------------------------*/
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 65s infinite linear 0.5s both;
+}
+
+.d-demo__item {
+  width: calc(215vw / 12);
+	margin: 15px 3px;
+}
+.d-demo__item > img{
+   width: 100%;
+}
+
+@keyframes infinity-scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+	
+}
+
+.d-demo__wrap1 {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list1 {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--right{
+animation :infinity-scroll-right 65s infinite linear 0.5s both;
+}
+
+.d-demo__item1 {
+  width: calc(215vw / 12);
+	margin: 3px;
+}
+.d-demo__item1 > img{
+   width: 100%;
+}
+
+/*character
+-------------------------------------------------------------*/
+.CHARACTER-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding-top: 60px;
+}
+.CHARACTER-box01{
+	display: flex;
+	justify-content: space-around;
+}
+
+.CHARACTER-box02{
+	display: flex;
+	justify-content: space-around;
+}
+.box-img{
+	width: 20%;
+	margin: 30px 20px;
+}
+
+/*staff
+--------------------------------------------------------------------*/
+.staff-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 30px;
+}
+.staff-box01{
+	display: flex;
+}
+.staff-img{
+	width: 100%;
+}
+.staff-text{
+	text-align: left;
+	height: 25px;
+	font-size: 20px;
+	margin: 30px;
+}
+.staff-box02{
+	display: flex;
+	margin-top: 70px;
+}
+.border p{
+	border-bottom: solid;
+	border-top: solid;
+	padding: 10px 0px;
+}
+.border{
+	margin: 12px 0px;
+}
+.staff-text h3{
+	font-weight: bold;
+}
+
+/*music
+----------------------------------------------------------------------------*/
+.music-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 30px;
+}
+.music-container{
+	margin: 20px;
+}
+/*slider-items
+----------------------------------------------------*/
+.slide-items {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slide-items li {
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*-----------矢印表示----------*/
+.slick-arrow:before{
+	content:""!important;
+	width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slick-prev:before{
+	background: url("../../img/gallery_arrow-prev-db880b241723.png") no-repeat !important;
+	background-size: contain!important;
+}
+.slick-next:before{
+	background: url("../../img/gallery_arrow-next-f1adbac880d8.png") no-repeat !important;
+	background-size: contain!important;
+}
+.slick-arrow{
+    z-index:2!important;
+    width:60px!important;
+    height:60px!important;
+}
+
+.slick-next{
+    right:-80px!important;
+}
+
+.slick-prev{
+    left:-50px!important;
+}
+
+
+/*INFORMATION
+--------------------------------------------------------------------------*/
+.information-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 30px;
+}
+table {
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	border-collapse: collapse;
+	borderspacing: 0;
+	background-color: #ffffff;
+}
+.th-text{
+	padding: 10px;
+	text-align: center;
+	background: #464646;
+	border: solid 1px #808080;
+}
+.td-text {
+	padding: 10px;
+	border: solid 1px #808080;
+	color: #000000;
+	
+}
+.non{
+	padding: 10px;
+	background-color: #464646;
+	border: solid 1px #808080;
+	font-weight: bold;
+}
+.col{
+	padding: 10px;
+	background-color: #464646;
+	text-align: center;
+	border: solid 1px #808080;
+}
+
+/*SHARE
+---------------------------------------------------------------------*/
+.share-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 30px;
+}
+.share-text ul {
+	display: flex;
+	justify-content: center;
+}
+.share-text li{
+	width: 10%;
+	margin: 30px;
+}
+.share-box{
+	margin-top: 50px;
+}
+
+/*footer
+------------------------------------------------------------------------------*/
+
+.footer-contents{
+	margin-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.footer-img{
+	width: 100%;
+	padding: 5px;
+}
+#footer_link{
+	margin: 20px;
+	font-size: 12px;
+}
+
+/*========= ボタンのためのCSS ===============*/
+
+/*ボタン全体の形状*/
+.openbtn{
+    /*はじめは非表示に*/
+	display: none;
+    /*ボタンの位置*/
+	position:fixed;
+	top:10px;
+	right: 10px;
+	z-index: 999;
+    /*ボタンの形状*/
+	background:#666;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+
+/*ボタンのアイコン設定*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #fff;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+
+/*モバイル版
+--------------------------------------------------------------*/
+@media screen and (max-width: 640px){
+	
+	
+	/*header-------------------*/
+	#g-navi{
+		display: none;
+	}
+	.main-img{
+		position: relative;
+	}
+	.main-title{
+		position: absolute;
+		right: 22%;
+		bottom: 10%;
+		width: 60%;
+	}
+	/*news--------------------*/
+	.news-title {
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		/*padding: 20px;  */                           
+	}	
+	.news-inner{
+		display: block;
+		/*margin-bottom: 30px;*/
+	}
+	.card{
+		width: 60%;
+		height: auto;
+		background-color: #464646;
+		margin: 0px auto;
+		margin-bottom: 20px;
+	}
+	.button a{
+		width: 200px;
+	}
+	/*story-------------------*/
+	.story-title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		padding-bottom: 25px;
+	}
+	.story-textbox{
+		position: absolute;
+		left: 10%;
+		bottom: 5%;
+		width: 80%;
+		line-height: 25px;
+	}
+	
+	/*slider------------------*/
+	.d-demo__item {
+  	width: calc(215vw / 4);
+	margin: 15px 3px;
+	}
+	.d-demo__item1 {
+  	width: calc(215vw / 4);
+	margin: 3px;
+	}
+	/*staff-------------------*/
+	.staff-title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		padding: 20px;
+	}
+	.staff-img{
+		display: none;
+	}
+	.staff-text{
+		text-align: left;
+		height: 200px;
+		font-size: 20px;
+		margin: 30px;
+	}
+	.staff-box02{
+		margin-top: 100px;
+	}
+	
+	/*character---------------*/
+	.CHARACTER-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding-top: 60px;
+	}
+	.CHARACTER-box01{
+	display: block;
+	}
+
+	.CHARACTER-box02{
+	display: block;
+	}
+	.box-img{
+	width: 50%;
+	margin: 0 auto;
+	}
+	/*music-------------------*/
+	.music-title{
+		padding-top: 200px;
+	}
+	.slick-arrow:before{
+		display: none;
+	}
+	/*INFORMATION
+	--------------------------------------------------------------------------*/
+	.information-title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		padding: 30px;
+	}
+	table {
+		width: 60%;
+		text-align: center;
+		margin: 0 auto;
+		border-collapse: collapse;
+		borderspacing: 0;
+		background-color: #ffffff;
+	}
+	/*information-------------*/
+	.information-title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		padding: 30px;
+	}
+	table {
+		width: 80%;
+	}
+	/*share-------------------*/
+	.share-title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		padding: 30px;
+	}
+	.share-text li{
+		width: 50%;
+		margin: 30px;
+	}
+	/*footer------------------*/
+	.footer-img{
+		width: 90%;
+		margin: 0 auto;
+	}
+	#footer_link{
+		font-size: 18px;
+	}
+	.footer-text{
+		font-size: 12px;
+	}
+}
+
+/*------------------------------
+モバイル版*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
