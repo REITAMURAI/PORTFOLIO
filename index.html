@@ -11,7 +11,7 @@
         <header class="wrapper header-contents">
             <!--h1-->
             <h1>
-                <a href="index.html"><img src="img/header_logo.svg" alt="REITAMURAUI"></a>
+                <a href="index.html"><img src="./img/header_logo.svg" alt="REITAMURAUI"></a>
             </h1>
             <!--/h1-->
             <!--.main-nav-->
@@ -21,16 +21,19 @@
                         <a href="index.html">TOP</a>
                     </li>
                     <li>
-                        <a href="#">ABOUT</a>
+                        <a href="#" class="toc-link" data-page="2">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#">WORK</a>
+                        <a href="#" class="toc-link" data-page="5">PROFILE</a>
                     </li>
                     <li>
-                        <a href="#">SKILL</a>
+                        <a href="#" class="toc-link" data-page="9">WORK</a>
                     </li>
                     <li>
-                        <a href="#">CONTACT</a>
+                        <a href="#" class="toc-link" data-page="16">SKILL</a>
+                    </li>
+                    <li>
+                        <a href="#" class="toc-link" data-page="18">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -42,19 +45,19 @@
                 <h2 class="h202">REITA MURAUI</h2>
                 <p class="subta">本の物語として紡ぐ、<br>私のキャリアとクリエイティブ</p>
                 <div class="hardbox">
-                    <img src="/img/openbook-mein.png" alt="">
+                    <img src="./img/openbook-mein.png" alt="">
                 </div>
                 <div class="hardbutton-text">
                     <p>CREATIVE / DESIGN / VIDEO</p>
                 </div>
             </div>
             <!-- 表紙の裏 -->
-            <div class="linebox hard">
+            <section id="hajimeni" class="linebox hard">
                 <h3>はじめに</h3>
                 <p>introduction</p>
                 <div class="topinfo">
                     <div class="books">
-                        <img src="img/Open Book.png" alt="開いた本イラスト">
+                        <img src="./img/Open Book.png" alt="開いた本イラスト">
                         <div class="text-box">
                             <h4>【このサイトについて】</h4>
                             <p>このポートフォリオサイトは、
@@ -72,7 +75,7 @@
                 </div>
                 <div class="bottominfo">
                     <div class="books bookssub">
-                        <img src="img/paper.png" alt="紙イラスト">
+                        <img src="./img/paper.png" alt="紙イラスト">
                         <div class="text-box">
                             <h4>【使い方】</h4>
                             <p>各ページの右下又は右上を選択することで、
@@ -88,7 +91,7 @@
                 <div class="p-name">
                     <p>REITA | PORTFOLIO BOOK</p>
                 </div>
-            </div>
+            </section>
             <!-- 目次
             -------------------------------------------------------------------------------------------->
             <div class="linebox hard mokuji-box">
@@ -202,18 +205,18 @@
             <!-- 2ページ
             ----------------------------------------------
             -------------------------------------------------------------------------------------------------------->
-            <div class="hard">
+            <section id="dai01" class="hard">
                 <h2 class="h201-p2">CHAPTER<br>
                     <span>01</span></h2>
-                <h3 class="h202">PORTFOLIO</h3>
+                <h3 class="h202">PROFILE</h3>
                 <p class="subta subta-kugiri">わたしのこれまでと、これから</p>
                 <div class="hardbox hardbox-kugiri">
-                    <img src="/img/openbook-mein.png" alt="">
+                    <img src="./img/openbook-mein.png" alt="">
                 </div>
                 <div class="p-name-p2">
                     <p>REITA | PORTFOLIO BOOK</p>
                 </div>
-            </div>
+            </section>
             <!-- 3ページ
             ----------------------------------------------------------------------------->
             <div class="linebox hard">
@@ -228,7 +231,7 @@
                 </div>
                 <div class="profile-main">
                     <div class="profile-photo">
-                        <img src="/img/human.jpg" alt="プロフィール写真">
+                        <img src="./img/human.jpg" alt="プロフィール写真">
                     </div>
                     <div>
                         <h2 class="profile-name">
@@ -416,7 +419,7 @@
                     <h3 class="h202">WORKS</h3>
                     <p class="subta subta-kugiri">わたしのこれまでの、制作物</p>
                     <div class="hardbox hardbox-kugiri">
-                        <img src="/img/openbook-mein.png" alt="">
+                        <img src="./img/openbook-mein.png" alt="">
                     </div>
                     <div class="p-name-p2">
                         <p>REITA | PORTFOLIO BOOK</p>
@@ -447,13 +450,13 @@
             type="button"
             data-type="image"
             data-title="HAL international Kids Academy site（架空）"
-            data-image="img/hal-international.jpg">
+            data-image="./img/hal-international.jpg">
             <div class="pc-mockup">
             <!-- PC本体 -->
-            <img class="pc-body" src="img/Isolatedlaptop..png" alt="PC mockup">
+            <img class="pc-body" src="./img/Isolatedlaptop..png" alt="PC mockup">
                 <!-- PC画面 -->
                 <div class="pc-screen">
-                    <img src="img/hal-international.jpg" alt="HAL international Kids Academy website"></div>
+                    <img src="./img/hal-international.jpg" alt="HAL international Kids Academy website"></div>
                     <!-- VIEW -->
                     <span class="view-label">
                         VIEW
@@ -507,11 +510,11 @@
                     type="button"
                     data-movie-type="website"
                     data-movie-title="映画サイト制作（架空）"
-                    data-movie-url="/movie-site/index.html">
+                    data-movie-url="./movie-site/index.html">
                     <div class="pc-mockup movie-pc-mockup">
-                        <img class="pc-body movie-pc-body" src="img/Isolatedlaptop..png" alt="映画サイト制作">
+                        <img class="pc-body movie-pc-body" src="./img/Isolatedlaptop..png" alt="映画サイト制作">
                             <div class="pc-screen movie-pc-screen">
-                                <img src="img/movie-site.png" alt="映画サイト制作 Webサイト"></div>
+                                <img src="./img/movie-site.png" alt="映画サイト制作 Webサイト"></div>
                                 <span class="view-label movie-view-label">VIEW</span>
                             </div>
                         </button>
@@ -547,11 +550,11 @@
                     type="button"
                     data-movie-type="website"
                     data-movie-title="Reita Murai Photogallery site（架空）"
-                    data-movie-url="/Photogallery-site/index.html">
+                    data-movie-url="./Photogallery-site/index.html">
                     <div class="pc-mockup movie-pc-mockup">
-                        <img class="pc-body movie-pc-body" src="img/Isolatedlaptop..png" alt="Reita Murai Photogallery">
+                        <img class="pc-body movie-pc-body" src="./img/Isolatedlaptop..png" alt="Reita Murai Photogallery">
                             <div class="pc-screen Photogallery-pc-screen">
-                                <img src="img/Photogallery-site.png" alt="Reita Murai Photogallery Webサイト"></div>
+                                <img src="./img/Photogallery-site.png" alt="Reita Murai Photogallery Webサイト"></div>
                                 <span class="view-label movie-view-label">VIEW</span>
                             </div>
                         </button>
@@ -587,11 +590,11 @@
                     type="button"
                     data-movie-type="website"
                     data-movie-title="ジョイフルファーム鵜の池RN"
-                    data-movie-url="/Joyfull-fram/index.html">
+                    data-movie-url="./Joyfull-fram/index.html">
                     <div class="pc-mockup movie-pc-mockup">
-                        <img class="pc-body movie-pc-body" src="img/Isolatedlaptop..png" alt="ジョイフルファーム鵜の池">
+                        <img class="pc-body movie-pc-body" src="./img/Isolatedlaptop..png" alt="ジョイフルファーム鵜の池">
                             <div class="pc-screen Joyfull-fram-pc-screen">
-                                <img src="img/Joyfull-fram.jpg" alt="ジョイフルファーム鵜の池 Webサイト"></div>
+                                <img src="./img/Joyfull-fram.jpg" alt="ジョイフルファーム鵜の池 Webサイト"></div>
                                 <span class="view-label movie-view-label">VIEW</span>
                             </div>
                         </button>
@@ -627,11 +630,11 @@
                     type="button"
                     data-movie-type="website"
                     data-movie-title="オーダー家具 オオヤマLP（架空）"
-                    data-movie-url="/oder-kagu/index.html">
+                    data-movie-url="./oder-kagu/index.html">
                     <div class="pc-mockup movie-pc-mockup">
-                        <img class="pc-body movie-pc-body" src="img/Isolatedlaptop..png" alt="オーダー家具 オオヤマLP">
+                        <img class="pc-body movie-pc-body" src="./img/Isolatedlaptop..png" alt="オーダー家具 オオヤマLP">
                             <div class="pc-screen oder-kagu-pc-screen">
-                                <img src="img/oder-kagu.jpg" alt="オーダー家具 オオヤマLP Webサイト"></div>
+                                <img src="./img/oder-kagu.jpg" alt="オーダー家具 オオヤマLP Webサイト"></div>
                                 <span class="view-label movie-view-label">VIEW</span>
                             </div>
                         </button>
@@ -678,13 +681,13 @@
             type="button"
             data-type="image"
             data-title="NOKOCHA（架空）"
-            data-image="img/NOKOCHA.jpg">
+            data-image="./img/NOKOCHA.jpg">
             <div class="pc-mockup">
             <!-- PC本体 -->
-            <img class="pc-body" src="img/Isolatedlaptop..png" alt="PC mockup">
+            <img class="pc-body" src="./img/Isolatedlaptop..png" alt="PC mockup">
                 <!-- PC画面 -->
                 <div class="pc-screen">
-                    <img src="img/NOKOCHA.jpg" alt="NOKOCHA website"></div>
+                    <img src="./img/NOKOCHA.jpg" alt="NOKOCHA website"></div>
                     <!-- VIEW -->
                     <span class="view-label">
                         VIEW
@@ -730,7 +733,7 @@
                     <h3 class="h202">SKILL</h3>
                     <p class="subta subta-kugiri">わたしの強みと、出来ること</p>
                     <div class="hardbox hardbox-kugiri">
-                        <img src="/img/openbook-mein.png" alt="">
+                        <img src="./img/openbook-mein.png" alt="">
                     </div>
                     <div class="p-name-p2">
                         <p>REITA | PORTFOLIO BOOK</p>
@@ -746,7 +749,7 @@
                     <h3 class="h202">CONTACT</h3>
                     <p class="subta subta-kugiri">つながる、ひろがる、つくる。</p>
                     <div class="hardbox hardbox-kugiri">
-                        <img src="/img/openbook-mein.png" alt="">
+                        <img src="./img/openbook-mein.png" alt="">
                     </div>
                     <div class="p-name-p2">
                         <p>REITA | PORTFOLIO BOOK</p>
