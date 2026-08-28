@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+	<title>REITA-Photogallery</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- title-font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif+JP:wght@200;300&display=swap" rel="stylesheet"> 
+	<!-- burger-menu-font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@200;400&family=Lobster&family=Noto+Serif+JP:wght@200;300&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/modaal.min.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/vegas.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- js -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/modaal.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/vegas.min.js"></script>
+	<script src="js/progressbar.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+	<!-- Loading -->
+	<div id="splash">
+		<div id="splash_text"></div>
+		<div class="loader_cover loader_cover-up"></div>
+		<div class="loader_cover loader_cover-down"></div>
+	</div>
+	<!-- page-Topbutton -->
+	<p class="pagetop"><a href="#container"><img src="img/arrow.png" alt="PAGE TOP" /></a></p>
+	<!-- header -->
+	<header>
+		<div id="slider">
+			<div class="vegas-overlay"></div>
+			<div class="header-log">
+				<h1>
+					<span class="slide-in leftAnime">
+						<span class="slide-in_inner leftAnimeInner">ReitaMurai</span>
+					</span>
+				</h1>
+				<p>
+					<span class="slide-in leftAnime">
+					<span class="slide-in_inner leftAnimeInner">Photogallery</span>
+					</span>
+				</p>
+			</div>
+		</div>
+		<small class="footer-side">©2023 REITA-Photogallery</small>
+		<!-- scroll-down -->
+		<div class="scrolldown">
+			<span>Scroll</span>
+		</div>
+		<div class="openbtn"><div class="openbtn-area"><span></span><span></span><span></span></div></div>
+		<nav id="g-nav" class="gnavi">
+			<ul class="filter-button-top">
+				<li id="all" class="is-checked"><a href="#all" class="all">ALL</a></li>
+				<li id="kaiyukan"><a href="#kaiyukan" class="kaiyukann">KAIYUKAN</a></li>
+				<li id="universal"><a href="#universal" class="universal">UNIVERSAL<span>STUDIO</span></a></li>
+				<li id="disney"><a href="#disney" class="disney">DISNEY<span>RESORT</span></a></li>
+				<li id="ramenhakubutukan"><a href="#ramenhakubutukan" class="ramenhakubutukan">RAMENHAKUBUTUKAN</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- .filter-button -->
+	<ul class="filter-button">
+		<li id="all" class="is-checked">ALL</li>
+		<li id="kaiyukan">KAIYUKAN</li>
+		<li id="universal">UNIVERSALSTUDIO</li>
+		<li id="disney">DISNEYRESORT</li>
+		<li id="ramenhakubutukan">RAMENHAKUBUTUKAN</li>
+	</ul>
+	<!-- .contents -->
+	<div class="contents">
+		<ul class="grid gallery" id="grid">
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k1.jpeg">
+					<img src="img/kaiyukan/k1.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u1.jpeg">
+					<img src="img/universal/u1.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d1.jpeg">
+					<img src="img/disney/d1.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r1.jpeg">
+					<img src="img/ramenhakubutukan/r1.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k2.jpeg">
+					<img src="img/kaiyukan/k2.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u2.jpeg">
+					<img src="img/universal/u2.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d2.jpeg">
+					<img src="img/disney/d2.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r2.jpeg">
+					<img src="img/ramenhakubutukan/r2.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k3.jpeg">
+					<img src="img/kaiyukan/k3.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u3.jpeg">
+					<img src="img/universal/u3.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d3.jpeg">
+					<img src="img/disney/d3.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r3.jpeg">
+					<img src="img/ramenhakubutukan/r3.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k4.jpeg">
+					<img src="img/kaiyukan/k4.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u4.jpeg">
+					<img src="img/universal/u4.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d4.jpeg">
+					<img src="img/disney/d4.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r4.jpeg">
+					<img src="img/ramenhakubutukan/r4.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k5.jpeg">
+					<img src="img/kaiyukan/k5.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u5.jpeg">
+					<img src="img/universal/u5.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d5.jpeg">
+					<img src="img/disney/d5.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r5.jpeg">
+					<img src="img/ramenhakubutukan/r5.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k6.jpeg">
+					<img src="img/kaiyukan/k6.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u6.jpeg">
+					<img src="img/universal/u6.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d6.jpeg">
+					<img src="img/disney/d6.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r6.jpeg">
+					<img src="img/ramenhakubutukan/r6.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k7.jpeg">
+					<img src="img/kaiyukan/k7.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u7.jpeg">
+					<img src="img/universal/u7.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d7.jpeg">
+					<img src="img/disney/d7.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r7.jpeg">
+					<img src="img/ramenhakubutukan/r7.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k8.jpeg">
+					<img src="img/kaiyukan/k8.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u8.jpeg">
+					<img src="img/universal/u8.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d8.jpeg">
+					<img src="img/disney/d8.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r8.jpeg">
+					<img src="img/ramenhakubutukan/r8.jpeg" alt="">
+				</a>
+			</li>
+			<!-- 1 -->
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k9.jpeg">
+					<img src="img/kaiyukan/k9.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u9.jpeg">
+					<img src="img/universal/u9.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d9.jpeg">
+					<img src="img/disney/d9.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r9.jpeg">
+					<img src="img/ramenhakubutukan/r9.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k10.jpeg">
+					<img src="img/kaiyukan/k10.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u10.jpeg">
+					<img src="img/universal/u10.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d10.jpeg">
+					<img src="img/disney/d10.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r10.jpeg">
+					<img src="img/ramenhakubutukan/r10.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k11.jpeg">
+					<img src="img/kaiyukan/k11.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u11.jpeg">
+					<img src="img/universal/u11.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d11.jpeg">
+					<img src="img/disney/d11.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r11.jpeg">
+					<img src="img/ramenhakubutukan/r11.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k12.jpeg">
+					<img src="img/kaiyukan/k12.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u12.jpeg">
+					<img src="img/universal/u12.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d12.jpeg">
+					<img src="img/disney/d12.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r12.jpeg">
+					<img src="img/ramenhakubutukan/r12.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k13.jpeg">
+					<img src="img/kaiyukan/k13.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u13.jpeg">
+					<img src="img/universal/u13.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d13.jpeg">
+					<img src="img/disney/d13.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r13.jpeg">
+					<img src="img/ramenhakubutukan/r13.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k14.jpeg">
+					<img src="img/kaiyukan/k14.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u14.jpeg">
+					<img src="img/universal/u14.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d14.jpeg">
+					<img src="img/disney/d14.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r14.jpeg">
+					<img src="img/ramenhakubutukan/r14.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k15.jpeg">
+					<img src="img/kaiyukan/k15.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u15.jpeg">
+					<img src="img/universal/u15.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d15.jpeg">
+					<img src="img/disney/d15.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r15.jpeg">
+					<img src="img/ramenhakubutukan/r15.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k16.jpeg">
+					<img src="img/kaiyukan/k16.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u16.jpeg">
+					<img src="img/universal/u16.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d16.jpeg">
+					<img src="img/disney/d16.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r16.jpeg">
+					<img src="img/ramenhakubutukan/r16.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k17.jpeg">
+					<img src="img/kaiyukan/k17.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u17.jpeg">
+					<img src="img/universal/u17.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d17.jpeg">
+					<img src="img/disney/d17.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r17.jpeg">
+					<img src="img/ramenhakubutukan/r17.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k18.jpeg">
+					<img src="img/kaiyukan/k18.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u18.jpeg">
+					<img src="img/universal/u18.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d18.jpeg">
+					<img src="img/disney/d18.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r18.jpeg">
+					<img src="img/ramenhakubutukan/r18.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k19.jpeg">
+					<img src="img/kaiyukan/k19.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u19.jpeg">
+					<img src="img/universal/u19.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d19.jpeg">
+					<img src="img/disney/d19.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r19.jpeg">
+					<img src="img/ramenhakubutukan/r19.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k20.jpeg">
+					<img src="img/kaiyukan/k20.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u20.jpeg">
+					<img src="img/universal/u20.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d20.jpeg">
+					<img src="img/disney/d20.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r20.jpeg">
+					<img src="img/ramenhakubutukan/r20.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k21.jpeg">
+					<img src="img/kaiyukan/k21.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u21.jpeg">
+					<img src="img/universal/u21.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d21.jpeg">
+					<img src="img/disney/d21.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r21.jpeg">
+					<img src="img/ramenhakubutukan/r21.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k22.jpeg">
+					<img src="img/kaiyukan/k22.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u22.jpeg">
+					<img src="img/universal/u22.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d22.jpeg">
+					<img src="img/disney/d22.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r22.jpeg">
+					<img src="img/ramenhakubutukan/r22.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k23.jpeg">
+					<img src="img/kaiyukan/k23.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u23.jpeg">
+					<img src="img/universal/u23.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d23.jpeg">
+					<img src="img/disney/d23.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox ramenhakubutukan">
+				<a href="img/ramenhakubutukan/r23.jpeg">
+					<img src="img/ramenhakubutukan/r23.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k24.jpeg">
+					<img src="img/kaiyukan/k24.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u24.jpeg">
+					<img src="img/universal/u24.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d24.jpeg">
+					<img src="img/disney/d24.jpegs" alt="">
+				</a>
+			</li>
+			<!-- 25 -->
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k25.jpeg">
+					<img src="img/kaiyukan/k25.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u25.jpeg">
+					<img src="img/universal/u25.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox disney">
+				<a href="img/disney/d25.jpeg">
+					<img src="img/disney/d25.jpeg" alt="">
+				</a>
+			</li>
+			<!-- 26 -->
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k26.jpeg">
+					<img src="img/kaiyukan/k26.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u26.jpeg">
+					<img src="img/universal/u26.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k27.jpeg">
+					<img src="img/kaiyukan/k27.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u27.jpeg">
+					<img src="img/universal/u27.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k28.jpeg">
+					<img src="img/kaiyukan/k28.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u28.jpeg">
+					<img src="img/universal/u28.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k29.jpeg">
+					<img src="img/kaiyukan/k29.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u29.jpeg">
+					<img src="img/universal/u29.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k30.jpeg">
+					<img src="img/kaiyukan/k30.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u30.jpeg">
+					<img src="img/universal/u30.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k31.jpeg">
+					<img src="img/kaiyukan/k31.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u31.jpeg">
+					<img src="img/universal/u31.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k32.jpeg">
+					<img src="img/kaiyukan/k32.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u32.jpeg">
+					<img src="img/universal/u32.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k33.jpeg">
+					<img src="img/kaiyukan/k33.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u33.jpeg">
+					<img src="img/universal/u33.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k34.jpeg">
+					<img src="img/kaiyukan/k34.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u34.jpeg">
+					<img src="img/universal/u34.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox kaiyukan">
+				<a href="img/kaiyukan/k35.jpeg">
+					<img src="img/kaiyukan/k35.jpeg" alt="">
+				</a>
+			</li>
+			<li class="itembox universal">
+				<a href="img/universal/u35.jpeg">
+					<img src="img/universal/u35.jpeg" alt="">
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- footer -->
+	<footer>
+	<div class="footer-button">
+		<p class="copyright">©2023 REITA-Photogallery</p>
+	</div>
+	</footer>
+</body>
+</html>
