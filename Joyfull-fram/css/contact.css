@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+/*共通部分
+------------------------------------------------------------------------*/
+html{
+	font-size: 100%;
+}
+body{
+	background-color: #fef2b7;
+	color: #000000;
+	font-family: "Noto Sans JP", sans-serif;
+	line-height: 1.8;
+}
+a{
+	text-decoration: none;
+	color: rgb(0, 0, 0); 
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.wrapper{
+	width: 1033px;
+	margin: 0 auto;
+}
+.main-wrapper{
+	width: 1033px;
+	margin: 0 auto; 
+}
+a:hover{
+	opacity: 0.7;
+}
+
+
+.maintitle{
+	padding-top: 43px;
+	width: 930px;
+	height: 133px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	object-fit: cover;
+	text-align: center;
+	font-size: 30px; 
+	color: #ffffff;
+	background-image: url(../img/maintitle.png);
+}
+
+
+/* header
+------------------------------------------------------------------------------- */
+.main-logo {
+	text-align: center;
+	padding-top: 0px;
+	margin-bottom: 80px;
+}
+
+.header-background {
+	position: relative;
+	z-index: 3;
+}
+
+.header-background img{
+	width: 100%;	/* 今回は横いっぱいで */
+}
+.main-logo img{
+	width: 4%;
+}
+.backgroundImg-top-inner{
+	position: absolute;	/* 絶対配置 */
+	/* 以下は要素を中央寄せしたいときの記述 */
+	top: 49%;	/* 上から50% */
+	left: 50%;	/* 左から50% */
+	transform: translate(-50%,-50%);	/* ずれたぶんの位置をもとに戻す */
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+.main-flex{
+	display: flex;
+	justify-content: center;
+}
+.main-flex li {
+	margin-top: 45px;
+	padding: 2px 47px;
+}
+
+/* mainnavの共通 */
+li.line{
+	border-left: 0.8px dashed #2e7919;
+	border-right: 0.8px dashed #2e7919;
+}
+
+.mainnav{
+	padding-top: 45px;
+	background-size: 35px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-align: center;
+	font-size: 18px; 
+	color: #2e7919;
+	background-image: url(../img/top.png);
+}
+.mainnav01{
+	background-image: url(../img/about.png);
+}
+.mainnav02{
+	background-image: url(../img/guidance.png);
+}
+.mainnav03{
+	background-image: url(../img/news.png);
+}
+.mainnav04{
+	background-image: url(../img/access.png);
+}
+.mainnav05{
+	background-image: url(../img/contact.png);
+}
+
+/* カード設定 */
+.backgroundImg-img{
+	position: absolute;
+	top: 32%;
+	left: 50%;
+	z-index: 1;
+}
+.contentbox{
+	position: absolute;
+    bottom: 0;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,-20%);
+	padding: 0;
+	margin: 0;
+}
+.card {
+	background-color: #ffffff;
+	background-size: 20%;
+	border-radius: 24px;
+	width: 210px;
+	height: 85px;
+	border-image: url(../img/senn.png) 30 / 19px round; 
+	padding: 5px 20px;
+	text-align: center;
+	margin: 0 5px;
+}
+.card h2 {
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.card img {
+	width: 100%;
+	object-fit: cover;
+	margin: 5px 0px;
+}
+
+.card p {
+	color: #4d4d4d;
+	font-size: 12px;
+	line-height: 1.5;
+	margin-top: 10px;
+	text-align: left;
+}
+.Card-flex {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.Card-box{
+    margin-bottom: 20px;
+}
+
+
+/* お問い合わせ
+-------------------------------------------------------------------------------- */
+/* 
+
+/* 外側 */
+.contact{
+    width: 57%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 80px 60px;
+	background-color: #ffffff;
+}
+/* 見出し */
+.contact-ttl {
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 中身の要素を真ん中 */
+.contact-table{
+    margin: 0 auto; 
+}
+
+.contact-item,
+.contact-body{
+    padding: 35px;
+}
+
+.contact-item {
+	font-size: 18px;
+    font-weight: bold;
+}
+.contact-body {
+    width: 74%;
+	text-align: left;
+}
+.contact-body-sub{
+	text-align: left;
+}
+/* 入力する所の大きさ */
+.form-text {
+	width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+	
+}
+/* 米印赤色 */
+.red{
+	color: #ff6868;
+}
+
+/* 電話番号と郵便番号の設定 */
+.form-text-sub{
+	width: 17%;
+	border-radius: 8px;
+    border: 1px solid #ccc;
+}
+/* テキストエリア大きさ */
+form textarea {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+/* テキストエリア文字高さ */
+.contact-item-sub{
+	padding-top: 120px;
+}
+/* ボタン位置 */
+.btn_area{
+	margin-top: 50px;
+	text-align: center;
+}
+/* background設定 */
+.backgroundImg-sub{
+	margin-top: 60%;
+	position: relative;
+}
+.backgroundImg-sub-img{
+	width: 100%;
+}
+.contact{
+	position: absolute;	
+	top: -70%;	
+	left: 50%;	
+	transform: translate(-50%,-50%);	
+}
+/* footer
+------------------------------------------------------------ */
+/* .footer-contentu{
+	display: none;
+} */
+.backgroundImg{
+	position: relative;	
+}
+.footer-box{
+	display: flex;
+	justify-content: center;
+}
+.backgroundImg img{
+	width: 100%;
+}
+.backgroundImg_inner{
+	position: absolute;	
+	top: 70%;	
+	left: 53%;	
+	transform: translate(-50%,-50%);	
+	padding: 0px;	
+	margin: 0px;
+}
+.footer-text{
+	margin-left: 40px;
+	color: rgb(255, 255, 255);
+}
+.footer-main{
+	background-color: #997e61;
+	padding: 35px;
+}
+.footer-main p{
+	text-align: center;
+	font-size: 14px;
+}
+
+
+
+
+/* レスポンシブ対応 
+---------------------------------------------------------------*/

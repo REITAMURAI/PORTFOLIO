@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+/*共通部分
+------------------------------------------------------------------------*/
+html{
+	font-size: 100%;
+}
+body{
+	background-color: #fef2b7;
+	color: #000000;
+	font-family: "Noto Sans JP", sans-serif;
+	line-height: 1.8;	/*行間*/
+}
+a{
+	text-decoration: none; /*リンク下線消す*/
+	color: rgb(0, 0, 0); /*リンクの色*/
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.wrapper{
+	width: 1033px;
+	margin: 0 auto;
+}
+.main-wrapper{
+	width: 1033px;
+	margin: 0 auto;
+}
+a:hover{
+	opacity: 0.7;
+}
+
+/* 見出しの共通 */
+.maintitle{
+	padding-top: 55px;
+	width: 1039px;
+	height: 133px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	object-fit: cover;
+	text-align: center;
+	font-size: 30px; 
+	color: #ffffff;
+	background-image: url(../img/maintitle.png);
+}
+.subtitle{
+	padding-top: 45px;
+	width: 470px;
+	height: 127px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	object-fit: cover;
+	text-align: center;
+	font-size: 30px; 
+	color: #ffffff;
+	background-image: url(../img/subtitle.png);
+}
+
+
+/* header
+------------------------------------------------------------------------------- */
+.main-logo {
+	text-align: center;
+	padding-top: 0px;
+	margin-bottom: 80px;
+}
+
+.header-background {
+	position: relative;
+}
+
+.header-background img{
+	width: 100%;	/* 今回は横いっぱいで */
+}
+.main-logo img{
+	width: 4%;
+}
+.backgroundImg-top-inner{
+	position: absolute;	/* 絶対配置 */
+	/* 以下は要素を中央寄せしたいときの記述 */
+	top: 49%;	/* 上から50% */
+	left: 50%;	/* 左から50% */
+	transform: translate(-50%,-50%);	/* ずれたぶんの位置をもとに戻す */
+	padding: 0px;
+	margin: 0px;
+	width: 100%;	
+}
+.main-flex{
+	display: flex;
+	justify-content: center;
+}
+.main-flex li {
+	margin-top: 45px;
+	padding: 2px 47px;
+}
+.backgroundImg-img{
+	position: relative;
+}
+.imgcontent{
+	margin-top: 10px;
+	margin-bottom: 110px;
+}
+.contentbox{
+	position: absolute;
+	top: 96%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 0;
+	margin: 0;
+}
+/* mainnavの共通 */
+li.line{
+	border-left: 0.8px dashed #2e7919;
+	border-right: 0.8px dashed #2e7919;
+}
+
+.mainnav{
+	padding-top: 45px;
+	background-size: 35px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-align: center;
+	font-size: 18px; 
+	color: #2e7919;
+	background-image: url(../img/top.png);
+}
+.mainnav01{
+	background-image: url(../img/about.png);
+}
+.mainnav02{
+	background-image: url(../img/guidance.png);
+}
+.mainnav03{
+	background-image: url(../img/news.png);
+}
+.mainnav04{
+	background-image: url(../img/access.png);
+}
+.mainnav05{
+	background-image: url(../img/contact.png);
+}
+/* slider
+================================================================================ */
+.slider-2 .slick-slide {
+	width: 766px;
+	height: 537px;
+	margin: 0 40px;
+	position: relative;
+	overflow: hidden;
+}
+.slider-2 .slick-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.Card-flex {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+/* カード設定 */
+.card {
+	background-color: #ffffff;
+	background-size: 20%;
+	border-radius: 24px;
+	width: 199px;
+	height: 276px;
+	border-image: url(../img/senn.png) 30 / 19px round; 
+	padding: 0 20px 20px 20px;
+	margin: 0 10px;
+	text-align: center;
+	
+
+}
+.card h2 {
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.card img {
+	width: 100%;
+	object-fit: cover;
+	margin: 5px 0px;
+}
+
+.card p {
+	color: #4d4d4d;
+	font-size: 12px;
+	line-height: 1.5;
+	margin-top: 10px;
+	text-align: left;
+}
+
+/* 今できる味覚狩り
+-------------------------------------------------------------------------------- */
+.backgroundImg-main{
+	position: relative;	/* ※親要素に必須 */
+}
+.backgroundImg-main img{
+	width: 100%;	/* 今回は横いっぱいで */
+}
+.backgroundImg-main-inner{
+	position: absolute;	/* 絶対配置 */
+	/* 以下は要素を中央寄せしたいときの記述 */
+	top: 50%;	/* 上から50% */
+	left: 50%;	/* 左から50% */
+	transform: translate(-50%,-50%);	/* ずれたぶんの位置をもとに戻す */
+	padding: 0px;
+	margin: 0px;	
+}
+#mikakugari{
+	margin-top: 25px;
+}
+.mikakugari-flex{
+	display: flex;
+	justify-content: center;
+}
+.mikakugari-flex li{
+	padding: 35px 4px;
+}
+.calendar-title {
+	text-align: center;
+	margin: 20px 0px;
+}
+.calendar-title img{
+	width: 30%;
+}
+.calendar-img{
+	margin: 0px 0px 25px 0px;
+}
+/* .item02,.item03,.item04,.item05{
+	opacity: 0.3;
+} */
+
+
+/* お知らせ
+---------------------------------------------------------- */
+#news{
+	margin-top: 25px;
+}
+#cardlayout-wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    margin: 1em 1em;
+    max-width: 1033px;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* リンクテキストの下線を非表示 */
+a.card-link {
+    text-decoration: none;
+}
+
+/* カードレイアウト内の画像を幅いっぱいに表示 */
+#cardlayout-wrap img {
+    /* display: block; */
+    max-width: 100%;
+    height: auto;
+}
+
+.card-figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* カードレイアウトのタイトル部分 */
+.card-title {
+    margin: 20px 34px 5px 10px;
+    color: #000000;
+    font-size: 18px;
+	font-weight: bold;
+}
+
+/* カードレイアウトの説明文部分 */
+.card-text-tax {
+    margin: 0px 34px 25px 10px;
+    color: #000000;
+	font-size: 15px;
+}
+
+/* アクセス＆気になる情報の共通部分 
+=============================================================*/
+.backgroundImg-sub{
+	position: relative;	/* ※親要素に必須 */
+	z-index: 999;
+}
+.backgroundImg-sub img{
+	width: 100%;	/* 今回は横いっぱいで */
+}
+.backgroundImg-sub-inner{
+	position: absolute;	/* 絶対配置 */
+	/* 以下は要素を中央寄せしたいときの記述 */
+	top: 55%;	/* 上から50% */
+	left: 50%;	/* 左から50% */
+	transform: translate(-50%,-50%);	/* ずれたぶんの位置をもとに戻す */
+	padding: 0px;
+	margin: 0px;
+}
+.flex-box{
+	display: flex;
+	justify-content: center;
+}
+/* アクセス
+------------------------------------------------------------ */
+.GoogleMap{
+	margin: 20px;
+	border: 3px solid #664300;
+}
+
+/* 気になる情報
+------------------------------------------------------------ */
+.kininaru-box{
+	margin-left: 80px;
+}
+.banner{
+	margin: 20px;
+	border: 3px solid #664300;
+	border-radius: 10px;
+	background-color: #664300;
+}
+.banner img{
+	width: 100%;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+/* footer
+------------------------------------------------------------ */
+.backgroundImg{
+	position: relative;	/* ※親要素に必須 */
+}
+.footer-box{
+	display: flex;
+	justify-content: center;
+}
+.backgroundImg img{
+	width: 100%;	/* 今回は横いっぱいで */
+}
+.backgroundImg_inner{
+	position: absolute;	/* 絶対配置 */
+	/* 以下は要素を中央寄せしたいときの記述 */
+	top: 70%;	/* 上から50% */
+	left: 53%;	/* 左から50% */
+	transform: translate(-50%,-50%);	/* ずれたぶんの位置をもとに戻す */
+	padding: 0px;	/* 念のため */
+	margin: 0px;	/* 念のため */
+}
+.footer-text{
+	margin-left: 40px;
+	color: rgb(255, 255, 255);
+}
+.footer-main{
+	background-color: #997e61;
+	padding: 35px;
+}
+.footer-main p{
+	text-align: center;
+	font-size: 14px;
+}
+
+
+
+
+/* レスポンシブ対応 
+---------------------------------------------------------------*/
+
+/* 画面幅768px以上の場合カードレイアウトを2カラムで配置 */
+@media all and (min-width: 768px) {
+    .card-list {
+        margin: 0.5em 0;
+        width: calc(100% / 2); /* 100%幅を2で割るという指定 */
+    }
+}
+
+/* 画面幅992px以上の場合カードレイアウトを3カラムで配置 */
+@media all and (min-width: 992px) {
+    .card-list {
+        width: calc(100% / 3); /* 100%幅を3で割るという指定 */
+    }
+    
+/* 最後の行が3列より少ない場合左寄せにレイアウトさせる */
+    #cardlayout-wrap::after{
+        content: "";
+        display: block;
+        width: calc(100% / 3);
+    }
+}
