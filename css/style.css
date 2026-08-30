@@ -1469,6 +1469,232 @@ body.movie-modal-open {
 .page.p21.odd {
     background-color: #e2dbcd;
 }
+/* 04-1 ----------------------------------------------------------------------*/
+.contact-detail .contact-intro {
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 2;
+    color: #555;
+}
+.contact-intro{
+    padding: 0 0 0 10px;
+}
+.contact-form-wrap {
+    margin-top: 35px;
+}
+.contact-form-wrap h4 {
+    margin: 0 0 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0px 0px 0px 50px;
+    text-align: left;
+}
+.contact-form {
+    width: 80%;
+    margin: 20px 20px 20px 50px;
+}
+.contact-field {
+    display: grid;
+    grid-template-columns: 100px 45px 1fr;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.contact-field label {
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left;
+
+}
+.contact-field .required {
+    font-size: 8px;
+    color: #888;
+}
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    border: 1px solid #bbb;
+    background: #fafafa;
+    padding: 9px 12px;
+    font-family: inherit;
+    font-size: 10px;
+    outline: none;
+}
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: #222;
+    background: #fff;
+}
+.contact-field textarea {
+    height: 105px;
+    resize: none;
+}
+.contact-message-field {
+    align-items: start;
+}
+.contact-message-field .required,
+.contact-message-field label {
+    padding-top: 10px;
+}
+.contact-form button {
+    display: block;
+    margin: 16px auto 0;
+    padding: 10px 45px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+.contact-form button span {
+    margin-left: 15px;
+    font-size: 13px;
+}
+/* 04-2 -----------------------------------------------------------------*/
+.contact-sns .sns-intro {
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 2;
+    color: #555;
+}
+.sns-intro p{
+    padding: 0 0 0 50px;
+}
+.sns-section {
+    margin: 50px;
+}
+.sns-section h4 {
+    margin: 0 0 15px;
+    padding-left: 12px;
+    border-left: 3px solid #222;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+}
+.sns-list {
+    border-top: 1px solid #ddd;
+}
+.portfolio-link,
+.sns-item {
+    display: grid;
+    grid-template-columns: 45px 130px 150px 1fr 30px;
+    align-items: center;
+    min-height: 55px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #222;
+}
+.portfolio-icon,
+.sns-icon {
+    width: 25px;
+    height: auto;
+    object-fit: cover;
+    text-align: center;
+}
+.portfolio-name,
+.sns-name {
+    font-size: 10px;
+    font-weight: 600;
+}
+.portfolio-url,
+.sns-id {
+    font-size: 9px;
+    color: #555;
+}
+.portfolio-description,
+.sns-description {
+    font-size: 9px;
+    color: #777;
+}
+.sns-arrow {
+    font-size: 14px;
+    text-align: center;
+}
+.portfolio-section {
+    margin-top: 30px;
+}
+/* 04-3 -----------------------------------------------------------------------*/
+.contact-last {
+    background: #f8f7f5;
+    text-align: center;
+}
+.contact-last-content {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px;
+}
+.contact-book-icon:before {
+    left: 0;
+    transform: rotate(-8deg);
+}
+.contact-book-icon:after {
+    right: 0;
+    transform: rotate(8deg);
+}
+.contact-last h1 {
+    margin: 0 0 25px;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+.contact-last-content > p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 2.2;
+    color: #555;
+}
+.contact-last-sub {
+    margin-top: 15px!important;
+}
+.contact-message-box {
+    max-width: 600px;
+    margin: 40px;
+    padding: 28px 35px;
+    border: 1px solid #aaa;
+    background: rgba(255,255,255,.5);
+}
+.box-line {
+    width: 30px;
+    height: 1px;
+    margin: 0 auto 18px;
+    background: #222;
+}
+.contact-message-box h2 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+.contact-message-box p {
+    margin: 0 0 18px;
+    font-size: 10px;
+    line-height: 2;
+    color: #666;
+}
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 9px 24px;
+    border: 1px solid #222;
+    color: #222;
+    text-decoration: none;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+}
+.contact-link span {
+    font-size: 13px;
+}
+.footer-img img{
+    width: 86%;
+    height: auto;
+    object-fit: cover;
+}
 /* 裏紙 ---------------------------------------------------------------*/
 /* =====================================
 BACK COVER｜本の裏表紙
